@@ -14,16 +14,19 @@
 
 Animal::Animal()
 {
+	std::cout << "Animal constructed" << std::endl;
 	this->type = "Default Type";
 }
 
 Animal::Animal(const std::string& type)
 {
+	std::cout << "Animal constructed" << std::endl;
 	this->type = type;
 }
 
 Animal::Animal(const Animal& other)
 {
+	std::cout << "Animal constructed" << std::endl;
 	this->type = other.type;
 }
 
@@ -37,6 +40,7 @@ Animal& Animal::operator=(const Animal& other)
 
 Animal::~Animal()
 {
+	std::cout << "Animal destroyed" << std::endl;
 }
 
 void Animal::makeSound() const

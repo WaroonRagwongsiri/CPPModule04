@@ -14,14 +14,17 @@
 
 Dog::Dog() : Animal("Dog")
 {
+	std::cout << "Dog constructed" << std::endl;
 }
 
 Dog::Dog(const std::string& type) : Animal(type)
 {
+	std::cout << "Dog constructed" << std::endl;
 }
 
 Dog::Dog(const Dog& other) : Animal(other)
 {
+	std::cout << "Dog constructed" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other)
@@ -34,6 +37,7 @@ Dog& Dog::operator=(const Dog& other)
 
 Dog::~Dog()
 {
+	std::cout << "Dog destroyed" << std::endl;
 }
 
 void Dog::makeSound() const

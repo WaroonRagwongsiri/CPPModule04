@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:08:03 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:22:29 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/06/27 16:26:36 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Animal.hpp"
 
-class Cat : public Animal
+class Cat : virtual public Animal
 {
 	private:
 		/* data */

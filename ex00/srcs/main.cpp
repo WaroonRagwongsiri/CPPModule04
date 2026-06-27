@@ -6,12 +6,13 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:27:46 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:36:02 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/06/27 16:15:29 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Dog.hpp"
 #include "../includes/Cat.hpp"
+#include "../includes/WrongCat.hpp"
 
 int	main(void)
 {
@@ -26,5 +27,16 @@ int	main(void)
 	delete meta;
 	delete i;
 	delete j;
+
+	const WrongAnimal* wrongMeta = new WrongAnimal();
+	const WrongAnimal* wrongI = new WrongCat();
+	std::cout << wrongI->getType() << " " << std::endl;
+	wrongI->makeSound();
+	wrongMeta->makeSound();
+	delete wrongMeta;
+	delete wrongI;
+
+	WrongCat wrongCat;
+	wrongCat.makeSound();
 	return (0);
 }
