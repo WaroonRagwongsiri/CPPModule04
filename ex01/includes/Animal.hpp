@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:06:17 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 16:32:48 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/06/27 17:01:19 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 # include <string>
 # include <iostream>
+# include <cstddef>
+# include <stdexcept>
 
 class Animal
 {
@@ -32,6 +34,8 @@ class Animal
 		virtual ~Animal();
 		virtual void makeSound() const;
 		std::string getType() const;
+		void setIdea(int index, const std::string& idea);
+		std::string getIdea(int index) const;
 };
 
 #endif

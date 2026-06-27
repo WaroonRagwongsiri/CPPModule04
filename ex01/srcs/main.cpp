@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:27:46 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 16:15:29 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/06/27 17:04:58 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main(void)
 	delete i;
 	delete j;
 
+	// Wrong Animal Test
 	const WrongAnimal* wrongMeta = new WrongAnimal();
 	const WrongAnimal* wrongI = new WrongCat();
 	std::cout << wrongI->getType() << " " << std::endl;
@@ -38,5 +39,17 @@ int	main(void)
 
 	WrongCat wrongCat;
 	wrongCat.makeSound();
+
+	// Copy Ideas Test
+	Dog original;
+	original.setIdea(0, "original idea");
+
+	Dog copy(original);
+	std::cout << "original idea[0]: " << original.getIdea(0) << std::endl;
+	std::cout << "copy idea[0]: " << copy.getIdea(0) << std::endl;
+
+	copy.setIdea(0, "copy idea");
+	std::cout << "original idea[0]: " << original.getIdea(0) << std::endl;
+	std::cout << "copy idea[0]: " << copy.getIdea(0) << std::endl;
 	return (0);
 }
