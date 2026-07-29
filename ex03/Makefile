@@ -6,7 +6,7 @@
 #    By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/27 15:26:18 by waroonwork@       #+#    #+#              #
-#    Updated: 2026/06/27 19:40:53 by waroonwork@      ###   ########.fr        #
+#    Updated: 2026/07/29 20:54:06 by waroonwork@      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SUFFIX		:=	.cpp
 INC_DIR		:=	includes/
 SRCS_DIR	:=	srcs/
 
-SRCS_FILES	:=	main
+SRCS_FILES	:=	main AMateria Character Cure Ice MateriaSource Linklist LinklistNode
 
 SRCS		:=	$(addsuffix $(SUFFIX), $(addprefix $(SRCS_DIR), $(SRCS_FILES)))
 OBJS		:=	$(SRCS:%$(SUFFIX)=%.o)
