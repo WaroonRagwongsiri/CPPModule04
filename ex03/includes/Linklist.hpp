@@ -6,14 +6,12 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 20:50:35 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:10:35 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/07/29 21:15:49 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LINKLIST_HPP
 # define LINKLIST_HPP
-
-# include <cstddef>
 
 class LinklistNode;
 
@@ -32,7 +30,6 @@ public:
 	bool contains(const void* item) const;
 	bool remove(const void* item);
 	void* popFront();
-	void* at(std::size_t index) const;
 	bool empty() const;
 	void clear();
 };

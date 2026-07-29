@@ -17,7 +17,6 @@
 
 # include <string>
 # include <iostream>
-# include <cstddef>
 # include <stdexcept>
 
 class AAnimal

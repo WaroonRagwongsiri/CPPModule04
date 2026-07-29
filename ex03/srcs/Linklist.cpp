@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 20:51:20 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:10:22 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/07/29 21:15:37 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,23 +118,6 @@ void* Linklist::popFront()
 	head = oldHead->next;
 	delete oldHead;
 	return item;
-}
-
-void* Linklist::at(std::size_t index) const
-{
-	LinklistNode*	current;
-	std::size_t		currentIndex;
-
-	current = head;
-	currentIndex = 0;
-	while (current != NULL)
-	{
-		if (currentIndex == index)
-			return current->item;
-		current = current->next;
-		++currentIndex;
-	}
-	return NULL;
 }
 
 bool Linklist::empty() const

@@ -6,12 +6,11 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:16:17 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 17:01:54 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/07/29 21:18:09 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Animal.hpp"
-#include <stdexcept>
 
 Animal::Animal()
 {
