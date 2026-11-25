@@ -27,5 +27,16 @@ int	main(void)
 	{
 		Dog	tmp = basic;
 	}
+
+	Animal*	animals[10];
+	for (int k = 0; k < 10; ++k)
+	{
+		if (k < 5)
+			animals[k] = new Dog();
+		else
+			animals[k] = new Cat();
+	}
+	for (int k = 0; k < 10; ++k)
+		delete animals[k];
 	return (0);
 }
