@@ -16,9 +16,6 @@
 # include <string>
 # include <iostream>
 
-/*
-** Deliberately "wrong": no virtual keyword at all.
-*/
 class WrongAAnimal
 {
 	protected:

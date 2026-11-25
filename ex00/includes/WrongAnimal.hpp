@@ -16,10 +16,6 @@
 # include <string>
 # include <iostream>
 
-/*
-** Deliberately "wrong": no virtual keyword anywhere, so deleting a
-** WrongCat through a WrongAnimal pointer only runs ~WrongAnimal.
-*/
 class WrongAnimal
 {
 	protected:
