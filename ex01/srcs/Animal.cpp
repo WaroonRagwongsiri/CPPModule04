@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:16:17 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:18:09 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,18 @@ Animal::Animal()
 {
 	std::cout << "Animal constructed" << std::endl;
 	this->type = "Default Type";
-	this->ideas = new Brain();
 }
 
 Animal::Animal(const std::string& type)
 {
 	std::cout << "Animal constructed" << std::endl;
 	this->type = type;
-	this->ideas = new Brain();
 }
 
 Animal::Animal(const Animal& other)
 {
-	std::cout << "Animal constructed" << std::endl;
+	std::cout << "Animal copy constructed" << std::endl;
 	this->type = other.type;
-	this->ideas = new Brain();
-	*(this->ideas) = *(other.ideas);
 }
 
 Animal& Animal::operator=(const Animal& other)
@@ -39,14 +35,11 @@ Animal& Animal::operator=(const Animal& other)
 	if (this == &other)
 		return (*this);
 	this->type = other.type;
-	*(this->ideas) = *(other.ideas);
 	return (*this);
 }
 
 Animal::~Animal()
 {
-	delete this->ideas;
-	this->ideas = NULL;
 	std::cout << "Animal destroyed" << std::endl;
 }
 
@@ -58,17 +51,4 @@ void Animal::makeSound() const
 std::string Animal::getType() const
 {
 	return (this->type);
-}
-
-void Animal::setIdea(int index, const std::string& idea)
-{
-	if (index >= 0 && index < IDEA_LEN)
-		this->ideas->ideas[index] = idea;
-}
-
-std::string Animal::getIdea(int index) const
-{
-	if (index >= 0 && index < IDEA_LEN)
-		return (this->ideas->ideas[index]);
-	throw std::invalid_argument("Index must be inbound");
 }

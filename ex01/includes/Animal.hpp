@@ -6,23 +6,18 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:06:17 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:18:17 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_H
 # define ANIMAL_H
 
-# include "Brain.hpp"
-
 # include <string>
 # include <iostream>
-# include <stdexcept>
 
 class Animal
 {
-	private:
-		Brain* ideas;
 	protected:
 		std::string type;
 	public:
@@ -33,8 +28,6 @@ class Animal
 		virtual ~Animal();
 		virtual void makeSound() const;
 		std::string getType() const;
-		void setIdea(int index, const std::string& idea);
-		std::string getIdea(int index) const;
 };
 
 #endif

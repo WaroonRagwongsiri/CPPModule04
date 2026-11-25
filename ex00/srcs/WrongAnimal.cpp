@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/27 15:57:00 by waroonwork@       #+#    #+#             */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal")
@@ -12,14 +24,14 @@ WrongAnimal::WrongAnimal(const std::string& type) : type(type)
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) : type(other.type)
 {
-	std::cout << "WrongAnimal constructed" << std::endl;
+	std::cout << "WrongAnimal copy constructed" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
 	if (this != &other)
 		type = other.type;
-	return *this;
+	return (*this);
 }
 
 WrongAnimal::~WrongAnimal()
@@ -34,5 +46,5 @@ void WrongAnimal::makeSound() const
 
 std::string WrongAnimal::getType() const
 {
-	return type;
+	return (type);
 }

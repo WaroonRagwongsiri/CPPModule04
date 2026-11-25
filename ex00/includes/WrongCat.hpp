@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/27 15:57:00 by waroonwork@       #+#    #+#             */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef WRONGCAT_H
 # define WRONGCAT_H
 
 # include "WrongAnimal.hpp"
 
-class WrongCat : virtual public WrongAnimal
+class WrongCat : public WrongAnimal
 {
 	public:
 		WrongCat();

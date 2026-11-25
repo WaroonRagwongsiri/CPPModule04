@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:42:13 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:52:48 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 
 class Brain
 {
-	public:
+	private:
 		std::string ideas[IDEA_LEN];
+	public:
 		Brain();
 		Brain(const Brain& other);
 		Brain& operator=(const Brain& other);

@@ -19,7 +19,8 @@ SUFFIX		:=	.cpp
 INC_DIR		:=	includes/
 SRCS_DIR	:=	srcs/
 
-SRCS_FILES	:=	main AMateria Character Cure Ice MateriaSource Linklist LinklistNode
+SRCS_FILES	:=	main AMateria Character Cure Ice MateriaSource ICharacter \
+				IMateriaSource Linklist LinklistNode
 
 SRCS		:=	$(addsuffix $(SUFFIX), $(addprefix $(SRCS_DIR), $(SRCS_FILES)))
 OBJS		:=	$(SRCS:%$(SUFFIX)=%.o)

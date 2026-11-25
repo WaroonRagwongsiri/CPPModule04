@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 20:51:20 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:15:37 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ Linklist::Linklist(const Linklist& other) : head(NULL)
 	current = other.head;
 	while (current != NULL)
 	{
-		append(current->item);
-		current = current->next;
+		append(current->getItem());
+		current = current->getNext();
 	}
 }
 
@@ -39,11 +39,11 @@ Linklist& Linklist::operator=(const Linklist& other)
 		current = other.head;
 		while (current != NULL)
 		{
-			append(current->item);
-			current = current->next;
+			append(current->getItem());
+			current = current->getNext();
 		}
 	}
-	return *this;
+	return (*this);
 }
 
 Linklist::~Linklist()
@@ -62,9 +62,9 @@ void Linklist::append(void* item)
 	else
 	{
 		current = head;
-		while (current->next != NULL)
-			current = current->next;
-		current->next = newNode;
+		while (current->getNext() != NULL)
+			current = current->getNext();
+		current->setNext(newNode);
 	}
 }
 
@@ -75,11 +75,11 @@ bool Linklist::contains(const void* item) const
 	current = head;
 	while (current != NULL)
 	{
-		if (current->item == item)
-			return true;
-		current = current->next;
+		if (current->getItem() == item)
+			return (true);
+		current = current->getNext();
 	}
-	return false;
+	return (false);
 }
 
 bool Linklist::remove(const void* item)
@@ -91,19 +91,19 @@ bool Linklist::remove(const void* item)
 	previous = NULL;
 	while (current != NULL)
 	{
-		if (current->item == item)
+		if (current->getItem() == item)
 		{
 			if (previous == NULL)
-				head = current->next;
+				head = current->getNext();
 			else
-				previous->next = current->next;
+				previous->setNext(current->getNext());
 			delete current;
-			return true;
+			return (true);
 		}
 		previous = current;
-		current = current->next;
+		current = current->getNext();
 	}
-	return false;
+	return (false);
 }
 
 void* Linklist::popFront()
@@ -112,17 +112,17 @@ void* Linklist::popFront()
 	void*			item;
 
 	if (head == NULL)
-		return NULL;
+		return (NULL);
 	oldHead = head;
-	item = oldHead->item;
-	head = oldHead->next;
+	item = oldHead->getItem();
+	head = oldHead->getNext();
 	delete oldHead;
-	return item;
+	return (item);
 }
 
 bool Linklist::empty() const
 {
-	return head == NULL;
+	return (head == NULL);
 }
 
 void Linklist::clear()
@@ -133,7 +133,7 @@ void Linklist::clear()
 	current = head;
 	while (current != NULL)
 	{
-		next = current->next;
+		next = current->getNext();
 		delete current;
 		current = next;
 	}

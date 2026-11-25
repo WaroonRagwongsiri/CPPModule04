@@ -16,6 +16,7 @@
 # include "ICharacter.hpp"
 # include "Linklist.hpp"
 
+# include <cstddef>
 # include <string>
 
 class AMateria;

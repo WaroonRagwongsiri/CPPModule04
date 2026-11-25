@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:25:02 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:33:31 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 Dog::Dog() : Animal("Dog")
 {
 	std::cout << "Dog constructed" << std::endl;
-}
-
-Dog::Dog(const std::string& type) : Animal(type)
-{
-	std::cout << "Dog constructed" << std::endl;
+	this->brain = new Brain();
 }
 
 Dog::Dog(const Dog& other) : Animal(other)
 {
-	std::cout << "Dog constructed" << std::endl;
+	std::cout << "Dog copy constructed" << std::endl;
+	this->brain = new Brain(*other.brain);
 }
 
 Dog& Dog::operator=(const Dog& other)
@@ -32,11 +29,14 @@ Dog& Dog::operator=(const Dog& other)
 	if (this == &other)
 		return (*this);
 	Animal::operator=(other);
+	*(this->brain) = *(other.brain);
 	return (*this);
 }
 
 Dog::~Dog()
 {
+	delete this->brain;
+	this->brain = NULL;
 	std::cout << "Dog destroyed" << std::endl;
 }
 

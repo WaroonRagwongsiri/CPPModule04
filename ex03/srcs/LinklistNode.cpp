@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 20:49:01 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/07/29 21:14:40 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ LinklistNode::LinklistNode(void* item) : item(item), next(NULL)
 {
 }
 
-LinklistNode::LinklistNode(const LinklistNode& other) : item(other.item), next(NULL)
+LinklistNode::LinklistNode(const LinklistNode& other)
+	: item(other.item), next(NULL)
 {
 }
 
@@ -31,9 +32,24 @@ LinklistNode& LinklistNode::operator=(const LinklistNode& other)
 		item = other.item;
 		next = NULL;
 	}
-	return *this;
+	return (*this);
 }
 
 LinklistNode::~LinklistNode()
 {
+}
+
+void* LinklistNode::getItem() const
+{
+	return (item);
+}
+
+LinklistNode* LinklistNode::getNext() const
+{
+	return (next);
+}
+
+void LinklistNode::setNext(LinklistNode* next)
+{
+	this->next = next;
 }

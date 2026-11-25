@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:08:03 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 16:26:36 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 # define CAT_H
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
-class Cat : virtual public Animal
+class Cat : public Animal
 {
 	private:
-		/* data */
+		Brain*	brain;
 	public:
 		Cat();
-		Cat(const std::string& type);
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);
 		~Cat();

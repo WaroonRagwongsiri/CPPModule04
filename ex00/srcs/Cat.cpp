@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:19:48 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:33:20 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@ Cat::Cat() : Animal("Cat")
 	std::cout << "Cat constructed" << std::endl;
 }
 
-Cat::Cat(const std::string& type) : Animal(type)
-{
-	std::cout << "Cat constructed" << std::endl;
-}
-
 Cat::Cat(const Cat& other) : Animal(other)
 {
-	std::cout << "Cat constructed" << std::endl;
+	std::cout << "Cat copy constructed" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other)

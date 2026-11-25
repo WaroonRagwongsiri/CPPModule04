@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:16:17 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 15:28:31 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Animal::Animal(const std::string& type)
 
 Animal::Animal(const Animal& other)
 {
-	std::cout << "Animal constructed" << std::endl;
+	std::cout << "Animal copy constructed" << std::endl;
 	this->type = other.type;
 }
 

@@ -6,7 +6,7 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 15:08:43 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/06/27 19:27:03 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/11/25 15:10:00 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 # define DOG_H
 
 # include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Dog : virtual public AAnimal
+class Dog : public AAnimal
 {
 	private:
-		/* data */
+		Brain*	brain;
 	public:
 		Dog();
-		Dog(const std::string& type);
 		Dog(const Dog& other);
 		Dog& operator=(const Dog& other);
 		~Dog();
